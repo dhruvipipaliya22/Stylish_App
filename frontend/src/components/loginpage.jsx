@@ -2,7 +2,7 @@ import React from 'react';
 
 const LoginPopup = () => {
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-900/50">
             <div className="bg-white bg-opacity-80 backdrop-blur-lg p-8 rounded-lg w-[90%] max-w-md shadow-xl">
                 <h2 className="text-2xl font-semibold text-center mb-6">Login</h2>
 

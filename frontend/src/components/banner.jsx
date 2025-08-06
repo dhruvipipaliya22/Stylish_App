@@ -12,40 +12,23 @@ const ShoeSlider = () => {
         spaceBetween={20}
         slidesPerView={1}
         pagination={{ clickable: true }}
-        modules={[Pagination]}
-      >
-        {slides.map((slides, index) => (
+        modules={[Pagination]}>
+        {slides.map((slide, index) => (
           <SwiperSlide key={index}>
-            {/* Top Two Shoes */}
             <div className="w-full px-4 md:px-10 py-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <div className="overflow-hidden rounded-xl shadow-md">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-stretch">
+                <div className="h-[550px] overflow-hidden rounded-xl shadow-md">
                   <img
-                    src={slides.topLeft}
+                    src={slide.topLeft}
                     alt="Shoe Left"
-                    className="w-full h-full object-cover"
-                  />
+                    className="w-full h-full object-cover" />
                 </div>
-                <div className="overflow-hidden rounded-xl shadow-md">
-                  <img
-                    src={slides.topRight}
-                    alt="Shoe Right"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-            </div>
 
-            {/* Bottom Shoe */}
-            <div className="w-full px-4 md:px-10 pb-8">
-              <div className="grid grid-cols-2 gap-5">
-                <div></div>
-                <div className="overflow-hidden rounded-xl shadow-md">
+                <div className="h-[550px] overflow-hidden rounded-xl shadow-md">
                   <img
-                    src={slides.bottom}
-                    alt="Shoe Bottom"
-                    className="w-full h-full object-cover"
-                  />
+                    src={slide.topRight}
+                    alt="Shoe Right"
+                    className="w-full h-full object-cover" />
                 </div>
               </div>
             </div>
