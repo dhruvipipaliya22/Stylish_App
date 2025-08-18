@@ -10,12 +10,12 @@ const LoginPopup = () => {
                     <input
                         type="email"
                         placeholder="Username or Email Address *"
-                        className="w-full px-4 py-2 border border-gray-300 rounded-md bg-white text-black"/>
+                        className="w-full px-4 py-2 border border-gray-300 rounded-md bg-white text-black" required/>
 
                     <input
                         type="password"
                         placeholder="Password"
-                        className="w-full px-4 py-2 border border-gray-300 rounded-md bg-white text-black"/>
+                        className="w-full px-4 py-2 border border-gray-300 rounded-md bg-white text-black" required/>
 
                     <div className="flex items-center justify-between text-sm text-gray-700">
                         <label className="flex items-center space-x-2">

@@ -1,8 +1,9 @@
 import { useState } from 'react';
+import { Link, Links } from 'react-router-dom';
 import logo from '../assets/logo/main-logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faFacebookF,faInstagram,faYoutube,faPinterestP} from '@fortawesome/free-brands-svg-icons';
-import {faCaretDown,faUser,faShoppingCart,faSearch,faXmark} from '@fortawesome/free-solid-svg-icons';
+import { faFacebookF, faInstagram, faYoutube, faPinterestP } from '@fortawesome/free-brands-svg-icons';
+import { faCaretDown, faUser, faShoppingCart, faSearch, faXmark } from '@fortawesome/free-solid-svg-icons';
 import LoginPopup from '../components/loginpage';
 
 function StylistUI() {
@@ -12,7 +13,7 @@ function StylistUI() {
   return (
     <>
       <header className="w-full relative">
-         {showLogin && <LoginPopup onClose={() => setShowLogin(true)} />}
+        {showLogin && <LoginPopup onClose={() => setShowLogin(true)} />}
         {showSearch && (
           <div className="relative top-0 left-0 w-full h-[120px] bg-[#212529] z-[999] flex items-center justify-center transition-all duration-300">
             <div className="w-[70%] flex items-center justify-between gap-4">
@@ -46,45 +47,45 @@ function StylistUI() {
           <div className="flex gap-4">
             <a href="#">Contact</a>
             <a href="#">Cart</a>
-             <a onClick={() => setShowLogin(true)} className="text-sm font-medium text-black hover:underline">
-            Login
-          </a>
+            <a href="#" onClick={() => setShowLogin(true)} className="text-sm font-medium text-black">Login</a>
           </div>
         </div>
 
         <nav className="flex items-center justify-between px-6 py-4 bg-white relative z-10">
           <div>
-            <img src={logo} alt="logo" className="w-[150px]" />
+            <Link to="/">
+              <img src={logo} alt="logo" className="w-[150px]" />
+            </Link>
           </div>
 
           <ul className="flex gap-6 font-medium text-md relative">
             <li className="relative group cursor-pointer">
-              Home <span><FontAwesomeIcon icon={faCaretDown} className="text-xs mt-[2px]" /></span>
+              <Link to="/">Home</Link> <span><FontAwesomeIcon icon={faCaretDown} className="text-xs mt-[2px]" /></span>
               <ul className="absolute hidden group-hover:block bg-white text-black shadow-md mt-2 rounded-md min-w-[150px] z-10">
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Home V1</li>
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Home V2</li>
+                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer"><a href="#">Home V1</a></li>
+                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer"><a href="#">Home V2</a></li>
               </ul>
             </li>
 
-            <li className="cursor-pointer">Men</li>
-            <li className="cursor-pointer">Women</li>
+            <li className="cursor-pointer"><Link to="/men">Men</Link></li>
+            <li className="cursor-pointer"><Link to="/women">Women</Link></li>
 
             <li className="relative group cursor-pointer">
-              Page <FontAwesomeIcon icon={faCaretDown} className="text-xs mt-[2px]" />
+              <Link to="/page">Page</Link> <FontAwesomeIcon icon={faCaretDown} className="text-xs mt-[2px]" />
               <ul className="absolute hidden group-hover:block bg-white text-black shadow-md mt-2 rounded-md min-w-[150px] z-10">
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">About Us</li>
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Shop</li>
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Blog</li>
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Single Product</li>
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Single Post</li>
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Styles</li>
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Cart</li>
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Login</li>
+                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer"><a href="#">About Us</a></li>
+                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer"><a href="#">Shop</a></li>
+                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer"><a href="#">Blog</a></li>
+                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer"><a href="#">Single Product</a></li>
+                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer"><a href="#">Single Post</a></li>
+                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer"><a href="#">Styles</a></li>
+                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer"><a href="#">Cart</a></li>
+                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer"><a href="#">Login</a></li>
               </ul>
             </li>
 
-            <li className="cursor-pointer">Shop</li>
-            <li className="cursor-pointer">Sale</li>
+            <li className="cursor-pointer"><Link to="/shop">Shop</Link></li>
+            <li className="cursor-pointer"><Link to="/sale">Sale</Link></li>
           </ul>
 
           <div className="flex gap-6 text-lg">
