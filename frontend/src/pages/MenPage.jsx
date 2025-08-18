@@ -3,7 +3,7 @@ import product1 from "../assets/menshose/product1.png";
 import PromoSection from "../components/promo";
 import DiscountSection from "../components/mendiscount";
 
-function MenPage() {
+export default function MenPage() {
   return (
     <div className="bg-white">
       <div

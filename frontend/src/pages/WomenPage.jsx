@@ -7,12 +7,11 @@ import "swiper/css/pagination";
 
 import PRODUCTS from '../utils/women.js';
 import banner from '../assets/women/product1.png';
-import heels from '../assets/women/heels1.png';7
+import heels from '../assets/women/heels1.png';
 
-function WomenShoesPage () {
+export default function WomenShoesPage() {
   return (
     <div className="bg-gray-50 text-gray-900">
-      {/* Hero */}
       <section
         className="relative bg-cover bg-center h-96"
         style={{ backgroundImage: `url(${banner})` }}
@@ -29,7 +28,6 @@ function WomenShoesPage () {
         </div>
       </section>
 
-      {/* Featured Products */}
       <section className="mt-12 px-4 md:px-20">
         <h2 className="text-3xl font-semibold text-center mb-8">Featured Collection</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
@@ -58,7 +56,6 @@ function WomenShoesPage () {
         </div>
       </section>
 
-      {/* Trending Products Carousel */}
       <section className="mt-16 px-4 md:px-20">
         <h2 className="text-3xl font-semibold text-center mb-8">Trending Now</h2>
         <Swiper
@@ -85,7 +82,6 @@ function WomenShoesPage () {
         </Swiper>
       </section>
 
-      {/* Categories */}
       <section className="mt-16 px-4 md:px-20">
         <h2 className="text-3xl font-semibold text-center mb-8">Shop by Category</h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -97,7 +93,7 @@ function WomenShoesPage () {
               <img
                 src={heels}
                 alt={cat}
-                className="w-full h-[300px] object-cover"
+                className="w-full h-[200px] object-cover"
               />
               <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                 <span className="text-2xl text-white font-bold">{cat}</span>
@@ -107,7 +103,6 @@ function WomenShoesPage () {
         </div>
       </section>
 
-      {/* Special Discount Banner */}
       <section className="mt-16 relative bg-pink-600 py-16 text-center text-white">
         <h2 className="text-4xl font-bold mb-4">Summer Sale is Here!</h2>
         <p className="mb-6 text-lg">Flat 40% off on all Women's Footwear</p>
@@ -116,7 +111,6 @@ function WomenShoesPage () {
         </button>
       </section>
 
-      {/* Testimonials */}
       <section className="mt-16 bg-gray-100 py-12 px-4">
         <h2 className="text-3xl font-semibold text-center mb-8">What Our Customers Say</h2>
         <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -126,7 +120,6 @@ function WomenShoesPage () {
         </div>
       </section>
 
-      {/* Instagram Feed */}
       <section className="mt-16 px-4 md:px-20">
         <h2 className="text-3xl font-semibold text-center mb-8">Follow Us On Instagram</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -141,7 +134,6 @@ function WomenShoesPage () {
         </div>
       </section>
 
-      {/* Newsletter */}
       <section className="mt-16 py-12 px-4">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl font-semibold mb-4">Join Our Newsletter</h2>
