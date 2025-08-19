@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link, Links } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import logo from '../assets/logo/main-logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faYoutube, faPinterestP } from '@fortawesome/free-brands-svg-icons';
@@ -13,7 +13,8 @@ function StylistUI() {
   return (
     <>
       <header className="w-full relative">
-        {showLogin && <LoginPopup onClose={() => setShowLogin(true)} />}
+        {showLogin && <LoginPopup onClose={() => setShowLogin(false)} />} {/* ✅ fix */}
+
         {showSearch && (
           <div className="relative top-0 left-0 w-full h-[120px] bg-[#212529] z-[999] flex items-center justify-center transition-all duration-300">
             <div className="w-[70%] flex items-center justify-between gap-4">

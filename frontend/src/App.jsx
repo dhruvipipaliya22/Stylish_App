@@ -4,6 +4,7 @@ import Layout from './components/Layout';
 import MenPage from './pages/MenPage';
 import StylistPage from './pages/StylistPage';
 import WomenPage from './pages/WomenPage';
+import ShopPage from './pages/ShopePage';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<StylistPage />} />
           <Route path="/men" element={<MenPage />} />
           <Route path="/women" element={<WomenPage />} />
+          <Route path="/shop" element={<ShopPage />} />
         </Route>
       </Routes>
     </Router>

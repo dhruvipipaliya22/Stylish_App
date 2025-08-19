@@ -1,21 +1,31 @@
 import React from 'react';
 
-const LoginPopup = () => {
+const LoginPopup = ({ onClose }) => {
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-900/50">
-            <div className="bg-white bg-opacity-80 backdrop-blur-lg p-8 rounded-lg w-[90%] max-w-md shadow-xl">
+        <div 
+            className="fixed inset-0 z-50 flex items-center justify-center bg-gray-900/50"
+            onClick={onClose}   // 🔹 bahar click se close
+        >
+            <div 
+                className="bg-white bg-opacity-80 backdrop-blur-lg p-8 rounded-lg w-[90%] max-w-md shadow-xl"
+                onClick={(e) => e.stopPropagation()}  // 🔹 andar click karne se band na ho
+            >
                 <h2 className="text-2xl font-semibold text-center mb-6">Login</h2>
 
                 <form className="space-y-4">
                     <input
                         type="email"
                         placeholder="Username or Email Address *"
-                        className="w-full px-4 py-2 border border-gray-300 rounded-md bg-white text-black" required/>
+                        className="w-full px-4 py-2 border border-gray-300 rounded-md bg-white text-black"
+                        required
+                    />
 
                     <input
                         type="password"
                         placeholder="Password"
-                        className="w-full px-4 py-2 border border-gray-300 rounded-md bg-white text-black" required/>
+                        className="w-full px-4 py-2 border border-gray-300 rounded-md bg-white text-black"
+                        required
+                    />
 
                     <div className="flex items-center justify-between text-sm text-gray-700">
                         <label className="flex items-center space-x-2">
@@ -30,12 +40,14 @@ const LoginPopup = () => {
                     <div className="pt-4 flex gap-4 justify-center">
                         <button
                             type="submit"
-                            className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded">
+                            className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded"
+                        >
                             Login
                         </button>
                         <button
                             type="button"
-                            className="border border-gray-400 hover:bg-gray-200 px-6 py-2 rounded">
+                            className="border border-gray-400 hover:bg-gray-200 px-6 py-2 rounded"
+                        >
                             Register
                         </button>
                     </div>
